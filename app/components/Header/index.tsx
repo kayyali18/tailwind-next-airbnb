@@ -26,7 +26,7 @@ const Header: React.FC = () => {
         <form>
           <div className="flex rounded-full py-2 text-sm transition duration-300 ease-in-out focus-within:border-rose-200 focus-within:shadow-sm focus-within:shadow-rose-200 hover:shadow-md hover:shadow-gray-200 hover:focus-within:shadow-rose-200 md:border-2">
             <input
-              className="flex-grow bg-transparent pl-5 text-sm text-gray-500 outline-none"
+              className="flex-grow bg-transparent pl-5 text-sm text-gray-500 outline-none placeholder:italic"
               type="text"
               placeholder="Search"
             />
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
 
       {/* User Actions */}
 
-      <div className="flex items-center justify-end space-x-4 text-gray-500 [&>*]:cursor-pointer">
+      <div className="flex items-center justify-end  space-x-2 text-gray-500 sm:space-x-4 [&>*]:cursor-pointer">
         <p className="hidden md:inline-block">Become a Host</p>
         <GlobeAltIcon className="h-6 text-rose-400" />
 
