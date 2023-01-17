@@ -3,11 +3,13 @@ import {
   GlobeAltIcon,
   MagnifyingGlassIcon as SearchIcon,
   UserCircleIcon,
-  UsersIcon,
 } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import { BaseSyntheticEvent, useState } from 'react';
 
 const Header: React.FC = () => {
+  const [searchInput, setSearchInput] = useState('');
+
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white p-5 shadow-md shadow-rose-200 md:px-10">
       {/* Header Logo */}
@@ -29,11 +31,17 @@ const Header: React.FC = () => {
               className="flex-grow bg-transparent pl-5 text-sm text-gray-500 outline-none placeholder:italic"
               type="text"
               placeholder="Search"
+              value={searchInput}
+              onChange={(e: BaseSyntheticEvent) =>
+                setSearchInput(e.target.value)
+              }
             />
             <SearchIcon className="hidden h-8 cursor-pointer rounded-full bg-rose-400 p-2 text-white md:mx-2 md:inline-flex" />
           </div>
         </form>
       </div>
+
+      {searchInput && <Calendar />}
 
       {/* User Actions */}
 
