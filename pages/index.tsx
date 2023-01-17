@@ -2,6 +2,7 @@ import Banner from '@/components/Banner';
 import LargeCard from '@/components/Cards/LargeCard';
 import MediumCard from '@/components/Cards/MediumCard';
 import SmallCard from '@/components/Cards/SmallCard';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header/';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -73,6 +74,8 @@ const Home: NextPage<IHomePageWithData> = ({ exploreData, cardsData }) => {
           btnText="Get Inspired"
         />
       </main>
+
+      <Footer />
     </div>
   );
 };
