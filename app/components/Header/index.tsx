@@ -6,6 +6,7 @@ import {
 } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import { BaseSyntheticEvent, useState } from 'react';
+import Calendar from '../Templates/Calendar';
 
 const Header: React.FC = () => {
   const [searchInput, setSearchInput] = useState('');
@@ -38,10 +39,10 @@ const Header: React.FC = () => {
             />
             <SearchIcon className="hidden h-8 cursor-pointer rounded-full bg-rose-400 p-2 text-white md:mx-2 md:inline-flex" />
           </div>
+
+          {searchInput && <Calendar />}
         </form>
       </div>
-
-      {searchInput && <Calendar />}
 
       {/* User Actions */}
 
