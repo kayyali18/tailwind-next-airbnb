@@ -8,7 +8,7 @@ const LargeCard: React.FC<LargeCardDataType> = ({
   btnText,
 }) => {
   return (
-    <section className="group relative my-16 cursor-pointer">
+    <section className="group relative my-16 cursor-pointer overflow-scroll">
       <div className="relative h-96 min-w-[300px] overflow-hidden rounded-2xl">
         <Image
           className="transition-transform group-hover:scale-105"

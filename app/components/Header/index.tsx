@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   const [searchInput, setSearchInput] = useState('');
 
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white p-5 shadow-md shadow-rose-200 md:px-10">
+    <header className="sticky top-0 z-50 grid grid-cols-[minmax(70px,_0.5fr)_minmax(120px,_1.2fr)_0.3fr] items-center gap-2 bg-white p-5 shadow-md shadow-rose-200 md:grid-cols-3 md:gap-0 md:px-10">
       {/* Header Logo */}
       <div className="center relative my-auto flex h-10 cursor-pointer">
         <Image
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
 
       <div>
         <form>
-          <div className="flex rounded-full py-2 text-sm transition duration-300 ease-in-out focus-within:border-rose-200 focus-within:shadow-sm focus-within:shadow-rose-200 hover:shadow-md hover:shadow-gray-200 hover:focus-within:shadow-rose-200 md:border-2">
+          <div className="flex rounded-full border-2 py-2 text-sm transition duration-300 ease-in-out focus-within:border-rose-200 focus-within:shadow-sm focus-within:shadow-rose-200 hover:shadow-md hover:shadow-gray-200 hover:focus-within:shadow-rose-200">
             <input
               className="flex-grow bg-transparent pl-5 text-sm text-gray-500 outline-none placeholder:italic"
               type="text"
@@ -46,13 +46,13 @@ const Header: React.FC = () => {
 
       {/* User Actions */}
 
-      <div className="flex items-center justify-end  space-x-2 text-gray-500 sm:space-x-4 [&>*]:cursor-pointer">
+      <div className="flex items-center justify-end text-center  text-gray-500 sm:space-x-4 md:space-x-2 [&>*]:cursor-pointer">
         <p className="hidden md:inline-block">Become a Host</p>
-        <GlobeAltIcon className="h-6 text-rose-400" />
+        <GlobeAltIcon className="hidden h-6 text-rose-400 md:inline-block" />
 
         <div className=" flex items-center space-x-2 rounded-full border-2 p-2">
           <HamburgerIcon className="h-6" />
-          <UserCircleIcon className="h-6" />
+          <UserCircleIcon className="hidden h-6 sm:inline-block" />
         </div>
       </div>
     </header>
